@@ -1,14 +1,24 @@
 <div class="optionsDisplay">
   <!-- Basemap -->
-  <div class="buttonsHeader">Basemap (for preview)</div>
+  <div class="sidebarHeader">Basemap (for preview)</div>
   <div class="basemapSelector">
     <button class="selectBM active" onclick="changeBasemap(1);">Basemap 1</button>
     <button class="selectBM" onclick="changeBasemap(2);">Basemap 2</button>
     <button class="selectBM" id="what" onclick="changeBasemap(3);">Basemap 3</button>
   </div>
 
+  <!-- Marker shape -->
+  <div class="sidebarHeader">Marker Shape</div>
+  <div class="optionSelector">
+    <button class="selectMarkerShape active" ng-click="changeMarkerShape('pin', 0)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('circle', 1)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('triangle', 2)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('square', 3)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('diamond', 4)"></button>
+  </div>
+
   <!-- Colors -->
-  <div class="buttonsHeader">Marker Background Color</div>
+  <div class="sidebarHeader">Marker Background Color</div>
   <div class="optionSelector">
     <div class="optionSelectorHeader">Basic</div>
     <div class="colorPaletteBasic">
@@ -43,16 +53,16 @@
   </div>
 
   <!-- Icons -->
-  <div class="buttonsHeader">Marker Icon</div>
+  <div class="sidebarHeader">Marker Icon</div>
   <div class="optionSelector">
     <button class="selectMarkerIcon" ng-click="changeMarkerIcon('noicon', 0)"></button>
     <button class="selectMarkerIcon active" ng-click="changeMarkerIcon('circle', 1)"></button>
-    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 2)"></button>
-    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('square', 3)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('square', 2)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 3)"></button>
   </div>
 
   <!-- Icons -->
-  <div class="buttonsHeader">Icon Color</div>
+  <div class="sidebarHeader">Icon Color</div>
   <div class="optionSelector">
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('red', 0)"></button>
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('green', 1)"></button>
@@ -65,7 +75,7 @@
   </div>
 
   <!-- Size -->
-  <div class="buttonsHeader">Marker Size</div>
+  <div class="sidebarHeader">Marker Size</div>
   <div class="optionSelector">
     <button class="selectMarkerSize" ng-click="changeMarkerSize('15', 0)">15</button>
     <button class="selectMarkerSize" ng-click="changeMarkerSize('20', 1)">20</button>
@@ -75,7 +85,7 @@
   </div>
 
   <!-- Output -->
-  <div class="buttonsHeader">Marker Div Classes</div>
+  <div class="sidebarHeader">Marker Div Classes</div>
   <div class="optionsOutput">
     <code>wim-map-marker {{markerClasses}}</code>
   </div>

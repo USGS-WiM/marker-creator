@@ -23,10 +23,27 @@ app.controller('creatorController', function($scope) {
   // Variable Setup
   // Variable Setup
   $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white wmm-size-25";
+  $scope.markerShape = "wmm-pin";
   $scope.markerBackgroundColor = "wmm-red";
   $scope.markerIcon = "wmm-circle";
   $scope.markerSize = "wmm-size-25";
   $scope.markerIconColor = "wmm-icon-white";
+
+
+  // Select Marker Background
+  // Select Marker Background
+  // Select Marker Background
+  $scope.changeMarkerShape = function(shape, position){
+    $scope.markerShape = "wmm-" + shape;
+    $scope.updateMarkerClasses();
+
+    // Active class for selected button
+    var markerShapeButtons = document.getElementsByClassName("selectMarkerShape");
+    for(var i = 0; i < markerShapeButtons.length; i++){
+      document.getElementsByClassName("selectMarkerShape")[i].classList.remove("active");
+    }
+    document.getElementsByClassName("selectMarkerShape")[position].classList.add("active");
+  }
 
 
   // Select Marker Background
@@ -37,7 +54,6 @@ app.controller('creatorController', function($scope) {
     $scope.updateMarkerClasses();
 
     // Active class for selected button
-    // Vibrant Colors
     var markerColorButtons = document.getElementsByClassName("selectMarkerBackground");
     for(var i = 0; i < markerColorButtons.length; i++){
       document.getElementsByClassName("selectMarkerBackground")[i].classList.remove("active");
@@ -99,6 +115,8 @@ app.controller('creatorController', function($scope) {
       $scope.markerClasses = "";
 
       $scope.markerClasses =
+        (typeof $scope.markerShape  !== "undefined" ? $scope.markerShape : '')
+        + ' ' +
         (typeof $scope.markerBackgroundColor  !== "undefined" ? $scope.markerBackgroundColor : '')
         + ' ' +
         (typeof $scope.markerIcon  !== "undefined" ? $scope.markerIcon : '')

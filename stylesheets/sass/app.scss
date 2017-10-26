@@ -23,6 +23,8 @@ button:hover{
   transform: scale(1.05);
   transition: 0.1s;
 }
+
+// Main sidebar
 .optionsDisplay{
   display: block;
   margin: 0 auto;
@@ -40,7 +42,9 @@ button:hover{
   height: 100vh;
   overflow-x: scroll;
 }
-.buttonsHeader{
+
+// Sidebar Header
+.sidebarHeader{
   margin-bottom: 10px;
   border-bottom: 2px solid black;
   box-sizing: border-box;
@@ -77,7 +81,7 @@ button:hover{
 }
 
 /*
-  Option Selection Buttons
+  Customization buttons
 */
 .optionSelector{
   display: flex;
@@ -114,6 +118,95 @@ button:hover{
     }
   }
 }
+
+// Marker shape
+// Marker shape
+// Marker shape
+.selectMarkerShape.active{
+  background-color: $black !important;
+  &:after,{
+    background-color: $black !important;
+    border-bottom-color: $black !important;
+  }
+}
+// Pin
+.selectMarkerShape:nth-child(1){
+  content: '';
+  display: block;
+  transition: 0.1s;
+  border: 2px solid rgba(0,0,0,1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 0;
+  height: 24px;
+  width: 24px;
+  transform: scale(45deg);
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  &:hover{
+    transform: rotate(45deg) scale(1.05);
+  }
+}
+// Circle
+.selectMarkerShape:nth-child(2){
+  border-radius: 50%;
+  background-color: white;
+  border-width: 2px;
+}
+// Square
+.selectMarkerShape:nth-child(3){
+  background-color: white;
+  border-width: 2px;
+}
+// Triangle
+.selectMarkerShape:nth-child(4){
+  height: 0px;
+  width: 0px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 28px solid black;
+  border-top: none !important;
+  background-color: transparent !important;
+  background-color: transparent;
+  position: relative;
+  top: 1px;
+  padding: 0;
+  &:after{
+    height: 0px;
+    width: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 22px solid white;
+    border-top: none !important;
+    background-color: transparent !important;
+    background-color: transparent;
+    position: absolute;
+    margin-left: -12px;
+    margin-top: 3px;
+    top: 1px;
+    content: '';
+    padding: 0;
+  }
+}
+// Diamond
+.selectMarkerShape:nth-child(5){
+  background-color: white;
+  border-width: 2px;
+  transform: rotate(45deg) scale(1);
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 2px;
+  &:hover{
+    transform: rotate(45deg) scale(1.05);
+  }
+}
+
+
 
 // Marker background color
 // Marker background color
@@ -180,8 +273,18 @@ button:hover{
   margin-left: -7px;
   margin-top: -7px;
 }
-// Triangle
+// Square
 .selectMarkerIcon:nth-child(3):before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-color: black;
+  margin-left: -7px;
+  margin-top: -7px;
+}
+// Triangle
+.selectMarkerIcon:nth-child(4):before{
   content: '';
   height: 0px;
   width: 0px;
@@ -193,16 +296,7 @@ button:hover{
   margin-left: -7px;
   margin-top: -7px;
 }
-// Square
-.selectMarkerIcon:nth-child(4):before{
-  content: '';
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  background-color: black;
-  margin-left: -7px;
-  margin-top: -7px;
-}
+
 
 // Marker icon color
 // Marker icon color
@@ -281,8 +375,6 @@ code{
   margin: 5px 0 0 0;
   border-radius: 3px;
 }
-
-
 
 /*Leaflet*/
 #mapid {
