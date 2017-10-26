@@ -22,9 +22,10 @@ app.controller('creatorController', function($scope) {
   // Variable Setup
   // Variable Setup
   // Variable Setup
-  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white";
+  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white wmm-size-20";
   $scope.markerBackgroundColor = "wmm-red";
   $scope.markerIcon = "wmm-circle";
+  $scope.markerSize = "wmm-size-20";
   $scope.markerIconColor = "wmm-icon-white";
 
 
@@ -74,6 +75,22 @@ app.controller('creatorController', function($scope) {
   }
 
 
+  // Change Marker Size
+  // Change Marker Size
+  // Change Marker Size
+  $scope.changeMarkerSize = function(iconSize, position){
+    $scope.markerSize = "wmm-size-" + iconSize;
+    $scope.updateMarkerClasses();
+
+    // Active class for selected button
+    var markerSizeButtons = document.getElementsByClassName("selectMarkerSize");
+    for(var i = 0; i < markerSizeButtons.length; i++){
+      document.getElementsByClassName("selectMarkerSize")[i].classList.remove("active");
+    }
+    document.getElementsByClassName("selectMarkerSize")[position].classList.add("active");
+  }
+
+
   // Update Marker Classes to reflect changes
   // Update Marker Classes to reflect changes
   // Update Marker Classes to reflect changes
@@ -85,7 +102,9 @@ app.controller('creatorController', function($scope) {
         + ' ' +
         (typeof $scope.markerIcon  !== "undefined" ? $scope.markerIcon : '')
         + ' ' +
-        (typeof $scope.markerIconColor  !== "undefined" ? $scope.markerIconColor : '');
+        (typeof $scope.markerIconColor  !== "undefined" ? $scope.markerIconColor : '')
+        + ' ' +
+        (typeof $scope.markerSize  !== "undefined" ? $scope.markerSize : '');
 
       document.getElementsByClassName("leaflet-marker-icon")[0].className = "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive wim-map-marker " + $scope.markerClasses;
   }

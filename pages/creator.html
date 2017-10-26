@@ -23,13 +23,14 @@
   <!-- Icons -->
   <div class="buttonsHeader">Marker Icon</div>
   <div class="optionSelector">
-    <button class="selectMarkerIcon active" ng-click="changeMarkerIcon('circle', 0)"></button>
-    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 1)"></button>
-    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('square', 2)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('noicon', 0)"></button>
+    <button class="selectMarkerIcon active" ng-click="changeMarkerIcon('circle', 1)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 2)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('square', 3)"></button>
   </div>
 
   <!-- Icons -->
-  <div class="buttonsHeader">Marker Color</div>
+  <div class="buttonsHeader">Icon Color</div>
   <div class="optionSelector">
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('red', 0)"></button>
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('green', 1)"></button>
@@ -39,6 +40,16 @@
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('purple', 5)"></button>
     <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('black', 6)"></button>
     <button class="selectMarkerIconColor active" ng-click="changeMarkerIconColor('white', 7)"></button>
+  </div>
+
+  <!-- Size -->
+  <div class="buttonsHeader">Marker Size</div>
+  <div class="optionSelector">
+    <button class="selectMarkerSize" ng-click="changeMarkerSize('15', 0)">15</button>
+    <button class="selectMarkerSize active" ng-click="changeMarkerSize('20', 1)">20</button>
+    <button class="selectMarkerSize" ng-click="changeMarkerSize('25', 2)">25</button>
+    <button class="selectMarkerSize" ng-click="changeMarkerSize('30', 3)">30</button>
+    <button class="selectMarkerSize" ng-click="changeMarkerSize('35', 4)">35</button>
   </div>
 
   <!-- Output -->

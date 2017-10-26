@@ -93,6 +93,8 @@ button:hover{
   transition: 0.2s;
   margin-right: 10px;
   margin-bottom: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 .optionSelector button.active{
   border-radius: 50%;
@@ -117,8 +119,19 @@ button:hover{
 .selectMarkerIcon{
   background-color: white;
 }
-// Circle
+// None
 .selectMarkerIcon:nth-child(1):before{
+  content: '';
+  display: block;
+  width: 27px;
+  height: 2px;
+  margin-top: 1px;
+  background-color: black;
+  margin-left: -6px;
+  transform: rotate(-45deg);
+}
+// Circle
+.selectMarkerIcon:nth-child(2):before{
   content: '';
   height: 14px;
   width: 14px;
@@ -129,7 +142,7 @@ button:hover{
   margin-top: -7px;
 }
 // Triangle
-.selectMarkerIcon:nth-child(2):before{
+.selectMarkerIcon:nth-child(3):before{
   content: '';
   height: 0px;
   width: 0px;
@@ -142,7 +155,7 @@ button:hover{
   margin-top: -7px;
 }
 // Square
-.selectMarkerIcon:nth-child(3):before{
+.selectMarkerIcon:nth-child(4):before{
   content: '';
   height: 14px;
   width: 14px;
@@ -165,6 +178,48 @@ button:hover{
 .selectMarkerIconColor:nth-child(8){background-color: $white;}
 
 
+// Marker size
+// Marker size
+// Marker size
+.selectMarkerSize{
+  background-color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 0;
+}
+.selectMarkerSize:nth-child(1){
+  height: 16px;
+  width: 15px;
+  max-width: 15px;
+  font-size: 7px;
+}
+.selectMarkerSize:nth-child(2){
+  height: 20px;
+  width: 20px;
+  font-size: 8px;
+}
+.selectMarkerSize:nth-child(3){
+  height: 25px;
+  width: 25px;
+  font-size: 9px;
+}
+.selectMarkerSize:nth-child(4){
+  height: 30px;
+  width: 30px;
+  font-size: 10px;
+}
+.selectMarkerSize:nth-child(5){
+  height: 35px;
+  width: 35px;
+  font-size: 11px;
+}
+
+
+
+
+// Misc
+// Misc
+// Misc
 .optionsOutput{
   display: block;
   text-align: left;
@@ -192,4 +247,8 @@ code{
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.leaflet-top{
+  display: none;
 }

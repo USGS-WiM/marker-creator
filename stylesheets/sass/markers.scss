@@ -29,52 +29,54 @@
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
-  height: 24px !important;
-  width: 20px !important;
   overflow: hidden;
-}
-.wim-map-marker:hover{
-  transition: 0.1s;
-}
-
-// Inner marker shape
-.wim-map-marker:after{
-  content: '';
-  display: block;
-  transition: 0.1s;
-  border: 3px solid rgba(0,0,0,0.5);
-  background-color: white;
-  margin: 0 auto;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  height: 20px !important;
-  width: 20px !important;
-  transform: scale(45deg);
-  box-sizing: border-box;
-
   position: relative;
-  // margin-top: -20px;
-  transform: rotate(45deg);
-  transform-origin: 50% 50%;
+
+  &:hover{
+    transition: 0.1s;
+  }
+
+  // Inner marker (shape, icon, etc)
+  &:after{
+    content: '';
+    display: block;
+    transition: 0.1s;
+    border: 3px solid rgba(0,0,0,0.5);
+    background-color: white;
+    margin: 0 auto;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: scale(45deg);
+    box-sizing: border-box;
+
+    position: relative;
+    // margin-top: -20px;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+  }
+
+  // Actual Icon
+  &:before{
+      height: 20px;
+      width: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-weight: bolder;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 500;
+  }
 }
 
-// Icon inside marker
-.wim-map-marker:before{
-  height: 20px;
-  width: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-weight: bolder;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 500;
-}
 
-
-/*Background colors*/
+/*
+Background colors
+Background colors
+Background colors
+*/
 .wmm-red:after{
   background-color: $red;
 }
@@ -101,7 +103,11 @@
 }
 
 
-/*Icon Colors*/
+/*
+Icon Colors
+Icon Colors
+Icon Colors
+*/
 .wmm-icon-red:before{
   background-color: $red;
   border-color: $red;
@@ -136,7 +142,15 @@
 }
 
 
-/*Icons*/
+/*
+Icons
+Icons
+Icons
+*/
+.wmm-noicon:before{
+  content: '';
+  display: none;
+}
 .wmm-circle:before{
   content: '';
   height: 8px;
@@ -166,4 +180,105 @@
   position: absolute;
   margin-left: 6px;
   margin-top: 6px;
+}
+
+
+/*
+Marker size
+Marker size
+Marker size
+*/
+.wmm-size-15{
+  height: 19px !important;
+  width: 15px !important;
+  margin-top: -8px !important;
+  margin-left: -7px !important;
+
+  &:after{
+    height: 15px !important;
+    width: 15px !important;
+  }
+
+  // Icons
+  &.wmm-circle:before{
+    height: 5px;
+    width: 5px;
+    margin: 5px 0 0 5px;
+  }
+}
+
+.wmm-size-20{
+  height: 24px !important;
+  width: 20px !important;
+  margin-top: -12px !important;
+  margin-left: -10px !important;
+
+  &:after{
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  // Icons
+  &.wmm-circle:before{
+    height: 8px;
+    width: 8px;
+    margin: 6px 0 0 6px;
+  }
+}
+
+.wmm-size-25{
+  height: 30px !important;
+  width: 25px !important;
+  margin-top: -17px !important;
+  margin-left: -13px !important;
+
+  &:after{
+    height: 25px !important;
+    width: 25px !important;
+  }
+
+  // Icons
+  &.wmm-circle:before{
+    height: 11px;
+    width: 11px;
+    margin: 7px 0 0 7px;
+  }
+}
+
+.wmm-size-30{
+  height: 36px !important;
+  width: 30px !important;
+  margin-top: -22px !important;
+  margin-left: -15px !important;
+
+  &:after{
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  // Icons
+  &.wmm-circle:before{
+    height: 14px;
+    width: 14px;
+    margin: 8px 0 0 8px;
+  }
+}
+
+.wmm-size-35{
+  height: 42px !important;
+  width: 35px !important;
+  margin-top: -26px !important;
+  margin-left: -18px !important;
+
+  &:after{
+    height: 35px !important;
+    width: 35px !important;
+  }
+
+  // Icons
+  &.wmm-circle:before{
+    height: 19px;
+    width: 19px;
+    margin: 8px 0 0 8px;
+  }
 }
