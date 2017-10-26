@@ -1,0 +1,6 @@
+# Options
+
+## Colors
+RED: #FC3C4F
+BLUE: #3092F4
+GREEN: #55E9CA

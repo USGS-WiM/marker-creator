@@ -1,0 +1,47 @@
+<div class="optionsDisplay">
+  <!-- Basemap -->
+  <div class="buttonsHeader">Basemap (for preview)</div>
+  <div class="basemapSelector">
+    <button class="selectBM active" onclick="changeBasemap(1);">Basemap 1</button>
+    <button class="selectBM" onclick="changeBasemap(2);">Basemap 2</button>
+    <button class="selectBM" id="what" onclick="changeBasemap(3);">Basemap 3</button>
+  </div>
+
+  <!-- Colors -->
+  <div class="buttonsHeader">Marker Background</div>
+  <div class="optionSelector">
+    <button class="selectMarkerBackground active" ng-click="changeMarkerBackground('red', 0)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('green', 1)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('blue', 2)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('orange', 3)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('yellow', 4)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('purple', 5)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('black', 6)"></button>
+    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('white', 7)"></button>
+  </div>
+
+  <!-- Icons -->
+  <div class="buttonsHeader">Marker Icon</div>
+  <div class="optionSelector">
+    <button class="selectMarkerIcon active" ng-click="changeMarkerIcon('circle', 0)">Circle</button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 1)">Triangle</button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('diamond', 2)">Diamond</button>
+  </div>
+
+  <!-- Icons -->
+  <div class="buttonsHeader">Marker Color</div>
+  <div class="optionSelector">
+    <button class="selectMarkerIconColor active" ng-click="changeMarkerIconColor('white', 0)">White</button>
+    <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('black', 1)">Black</button>
+    <button class="selectMarkerIconColor" ng-click="changeMarkerIconColor('yellow', 2)">Yellow</button>
+  </div>
+
+  <!-- Output -->
+  <div class="buttonsHeader">Marker Div Classes</div>
+  <div class="optionsOutput">
+    <code>wim-map-marker {{markerClasses}}</code>
+  </div>
+</div>
+
+
+<!-- <div class="wim-map-marker map-marker-preview" ng-class="markerClasses"></div> -->
