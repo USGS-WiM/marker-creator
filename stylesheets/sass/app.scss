@@ -23,31 +23,28 @@ button:hover{
   transform: scale(1.05);
   transition: 0.1s;
 }
-.map-marker-preview{
-  display: block;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  z-index: 5000;
-}
 .optionsDisplay{
   display: block;
   margin: 0 auto;
   text-align: center;
   background-color: rgba(255,255,255,0.9);
   box-sizing: border-box;
-  padding: 20px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   width: 400px;
   margin-bottom: 70px;
-  position: absolute;
+  position: fixed;
   z-index: 5000;
-  right: 45px;
-  border-radius: 5px;
+  left: 0;
+  top: 0;
+  border-right: 2px solid black;
+  height: 100vh;
+  overflow-x: scroll;
 }
 .buttonsHeader{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  padding: 10px 0 5px 0;
   font-size: 14px;
   font-weight: bolder;
   text-align: left;
@@ -85,25 +82,46 @@ button:hover{
 .optionSelector{
   display: flex;
   flex-wrap: wrap;
-}
-.optionSelector button{
-  border: 2px solid black;
-  height: 30px;
-  width: 30px;
-  transition: 0.2s;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.optionSelector button.active{
-  border-radius: 50%;
-  transition: 0.2s;
+  button{
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    transition: 0.2s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    .active{
+      border-radius: 50%;
+      transition: 0.22s;
+    }
+  }
+  .optionSelectorHeader{
+    display: block;
+    width: 100%;
+    letter-spacing: -0.4px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0 0 5px 0;
+    &:before{
+      content: '\2014 ';
+      position: relative;
+      top: -1px;
+      margin-right: 1px;
+      display: inline-block;
+    }
+  }
 }
 
 // Marker background color
 // Marker background color
 // Marker background color
+.selectMarkerBackground.active{
+  border-radius: 50%;
+}
+// Basic colors
 .selectMarkerBackground:nth-child(1){background-color: $red;}
 .selectMarkerBackground:nth-child(2){background-color: $green;}
 .selectMarkerBackground:nth-child(3){background-color: $blue;}
@@ -112,10 +130,31 @@ button:hover{
 .selectMarkerBackground:nth-child(6){background-color: $purple;}
 .selectMarkerBackground:nth-child(7){background-color: $black;}
 .selectMarkerBackground:nth-child(8){background-color: $white;}
+// Alternative colors
+.colorPaletteAlt .selectMarkerBackground:nth-child(1){background-color: $altRed;}
+.colorPaletteAlt .selectMarkerBackground:nth-child(2){background-color: $altDarkRed;}
+.colorPaletteAlt .selectMarkerBackground:nth-child(3){background-color: $altOrange;}
+.colorPaletteAlt .selectMarkerBackground:nth-child(4){background-color: $altLime;}
+.colorPaletteAlt .selectMarkerBackground:nth-child(5){background-color: $altSky;}
+.colorPaletteAlt .selectMarkerBackground:nth-child(6){background-color: $altBlue;}
+// Muted colors
+.colorPaletteMuted .selectMarkerBackground:nth-child(1){background-color: $mutedRed;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(2){background-color: $mutedGreen;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(3){background-color: $mutedBlue;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(4){background-color: $mutedOrange;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(5){background-color: $mutedYellow;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(6){background-color: $mutedPurple;}
+.colorPaletteMuted .selectMarkerBackground:nth-child(7){background-color: $mutedPink;}
+
+
+
 
 // Marker icons
 // Marker icons
 // Marker icons
+.selectMarkerIcon.active{
+  border-radius: 50%;
+}
 .selectMarkerIcon{
   background-color: white;
 }
@@ -168,6 +207,9 @@ button:hover{
 // Marker icon color
 // Marker icon color
 // Marker icon color
+.selectMarkerIconColor.active{
+  border-radius: 50%;
+}
 .selectMarkerIconColor:nth-child(1){background-color: $red;}
 .selectMarkerIconColor:nth-child(2){background-color: $green;}
 .selectMarkerIconColor:nth-child(3){background-color: $blue;}
@@ -181,6 +223,9 @@ button:hover{
 // Marker size
 // Marker size
 // Marker size
+.selectMarkerSize.active{
+  border-radius: 50%;
+}
 .selectMarkerSize{
   background-color: white;
   font-weight: bolder;
@@ -244,8 +289,9 @@ code{
   display: block;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
+  width: calc(100vw - 400px);
   height: 100vh;
 }
 

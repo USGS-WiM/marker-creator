@@ -8,16 +8,38 @@
   </div>
 
   <!-- Colors -->
-  <div class="buttonsHeader">Marker Background</div>
+  <div class="buttonsHeader">Marker Background Color</div>
   <div class="optionSelector">
-    <button class="selectMarkerBackground active" ng-click="changeMarkerBackground('red', 0)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('green', 1)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('blue', 2)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('orange', 3)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('yellow', 4)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('purple', 5)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('black', 6)"></button>
-    <button class="selectMarkerBackground" ng-click="changeMarkerBackground('white', 7)"></button>
+    <div class="optionSelectorHeader">Basic</div>
+    <div class="colorPaletteBasic">
+      <button class="selectMarkerBackground active" ng-click="changeMarkerBackground('red', 0)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('green', 1)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('blue', 2)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('orange', 3)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('yellow', 4)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('purple', 5)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('black', 6)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('white', 7)"></button>
+    </div>
+    <div class="optionSelectorHeader">Alternative</div>
+    <div class="colorPaletteAlt">
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('altred', 8)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('darkred', 9)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('altorange', 10)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('lime', 11)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('sky', 12)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('altblue', 13)"></button>
+    </div>
+    <div class="optionSelectorHeader">Muted</div>
+    <div class="colorPaletteMuted">
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedred', 14)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedgreen', 15)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedblue', 16)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedorange', 17)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedyellow', 18)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedpurple', 19)"></button>
+      <button class="selectMarkerBackground" ng-click="changeMarkerBackground('mutedpink', 20)"></button>
+    </div>
   </div>
 
   <!-- Icons -->
@@ -46,8 +68,8 @@
   <div class="buttonsHeader">Marker Size</div>
   <div class="optionSelector">
     <button class="selectMarkerSize" ng-click="changeMarkerSize('15', 0)">15</button>
-    <button class="selectMarkerSize active" ng-click="changeMarkerSize('20', 1)">20</button>
-    <button class="selectMarkerSize" ng-click="changeMarkerSize('25', 2)">25</button>
+    <button class="selectMarkerSize" ng-click="changeMarkerSize('20', 1)">20</button>
+    <button class="selectMarkerSize active" ng-click="changeMarkerSize('25', 2)">25</button>
     <button class="selectMarkerSize" ng-click="changeMarkerSize('30', 3)">30</button>
     <button class="selectMarkerSize" ng-click="changeMarkerSize('35', 4)">35</button>
   </div>
@@ -58,6 +80,3 @@
     <code>wim-map-marker {{markerClasses}}</code>
   </div>
 </div>
-
-
-<!-- <div class="wim-map-marker map-marker-preview" ng-class="markerClasses"></div> -->

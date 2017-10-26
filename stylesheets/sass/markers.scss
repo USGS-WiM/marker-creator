@@ -77,30 +77,35 @@ Background colors
 Background colors
 Background colors
 */
-.wmm-red:after{
-  background-color: $red;
-}
-.wmm-green:after{
-  background-color: $green;
-}
-.wmm-blue:after{
-  background-color: $blue;
-}
-.wmm-orange:after{
-  background-color: $orange;
-}
-.wmm-yellow:after{
-  background-color: $yellow;
-}
-.wmm-purple:after{
-  background-color: $purple;
-}
-.wmm-black:after{
-  background-color: $black;
-}
-.wmm-white:after{
-  background-color: $white;
-}
+
+// Base Colors
+.wmm-black:after{background-color: $black;}
+.wmm-white:after{background-color: $white;}
+
+// Vibrant colors
+.wmm-red:after{background-color: $red;}
+.wmm-green:after{background-color: $green;}
+.wmm-blue:after{background-color: $blue;}
+.wmm-orange:after{background-color: $orange;}.wmm-yellow:after{background-color: $yellow;}
+.wmm-purple:after{background-color: $purple;}
+
+// Alt colors
+.wmm-altred:after{background-color: $altRed;}
+.wmm-darkred:after{background-color: $altDarkRed;}
+.wmm-altorange:after{background-color: $altOrange;}
+.wmm-lime:after{background-color: $altLime;}
+.wmm-sky:after{background-color: $altSky;}
+.wmm-altblue:after{background-color: $altBlue;}
+
+// Muted colors
+.wmm-mutedred:after{background-color: $mutedRed;}
+.wmm-mutedgreen:after{background-color: $mutedGreen;}
+.wmm-mutedblue:after{background-color: $mutedBlue;}
+.wmm-mutedorange:after{background-color: $mutedOrange;}
+.wmm-mutedyellow:after{background-color: $mutedYellow;}
+.wmm-mutedpurple:after{background-color: $mutedPurple;}
+.wmm-mutedpink:after{background-color: $mutedPink;}
+
 
 
 /*
@@ -142,6 +147,7 @@ Icon Colors
 }
 
 
+
 /*
 Icons
 Icons
@@ -157,8 +163,6 @@ Icons
   width: 8px;
   border-radius: 50%;
   position: absolute;
-  margin-top: 6px;
-  margin-left: 6px;
 }
 .wmm-triangle:before{
   content: '';
@@ -178,8 +182,6 @@ Icons
   height: 8px;
   width: 8px;
   position: absolute;
-  margin-left: 6px;
-  margin-top: 6px;
 }
 
 
@@ -205,6 +207,11 @@ Marker size
     width: 5px;
     margin: 5px 0 0 5px;
   }
+  &.wmm-square:before{
+    height: 5px;
+    width: 5px;
+    margin: 5px 0 0 5px;
+  }
 }
 
 .wmm-size-20{
@@ -220,6 +227,11 @@ Marker size
 
   // Icons
   &.wmm-circle:before{
+    height: 8px;
+    width: 8px;
+    margin: 6px 0 0 6px;
+  }
+  &.wmm-square:before{
     height: 8px;
     width: 8px;
     margin: 6px 0 0 6px;
@@ -243,6 +255,11 @@ Marker size
     width: 11px;
     margin: 7px 0 0 7px;
   }
+  &.wmm-square:before{
+    height: 9px;
+    width: 9px;
+    margin: 8px 0 0 8px;
+  }
 }
 
 .wmm-size-30{
@@ -262,6 +279,11 @@ Marker size
     width: 14px;
     margin: 8px 0 0 8px;
   }
+  &.wmm-square:before{
+    height: 12px;
+    width: 12px;
+    margin: 9px 0 0 9px;
+  }
 }
 
 .wmm-size-35{
@@ -280,5 +302,10 @@ Marker size
     height: 19px;
     width: 19px;
     margin: 8px 0 0 8px;
+  }
+  &.wmm-square:before{
+    height: 15px;
+    width: 15px;
+    margin: 10px 0 0 10px;
   }
 }

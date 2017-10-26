@@ -22,10 +22,10 @@ app.controller('creatorController', function($scope) {
   // Variable Setup
   // Variable Setup
   // Variable Setup
-  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white wmm-size-20";
+  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white wmm-size-25";
   $scope.markerBackgroundColor = "wmm-red";
   $scope.markerIcon = "wmm-circle";
-  $scope.markerSize = "wmm-size-20";
+  $scope.markerSize = "wmm-size-25";
   $scope.markerIconColor = "wmm-icon-white";
 
 
@@ -37,6 +37,7 @@ app.controller('creatorController', function($scope) {
     $scope.updateMarkerClasses();
 
     // Active class for selected button
+    // Vibrant Colors
     var markerColorButtons = document.getElementsByClassName("selectMarkerBackground");
     for(var i = 0; i < markerColorButtons.length; i++){
       document.getElementsByClassName("selectMarkerBackground")[i].classList.remove("active");
