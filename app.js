@@ -22,7 +22,7 @@ app.controller('creatorController', function($scope) {
   // Variable Setup
   // Variable Setup
   // Variable Setup
-  $scope.markerClasses = "wim-map-marker wmm-red wmm-circle wmm-icon-white";
+  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white";
   $scope.markerBackgroundColor = "wmm-red";
   $scope.markerIcon = "wmm-circle";
   $scope.markerIconColor = "wmm-icon-white";
