@@ -6,6 +6,18 @@
 
 @import "variables.scss";
 
+// Leaflet default overwrites
+.leaflet-marker-icon:before{
+  right: auto !important;
+  bottom: auto !important;
+  height: auto;
+  width: auto;
+  box-shadow: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+
 // Outer marker wrapper
 .wim-map-marker{
   display: block;
