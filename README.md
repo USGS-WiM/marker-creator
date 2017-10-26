@@ -11,7 +11,8 @@ What things you need to install the software and how to install them
 
 ```
 Simple local web server
-SASS autocompile plugin
+Sass autocompile plugin 
+  Atom: https://atom.io/packages/sass-autocompile 
 ```
 
 ## Getting Started
@@ -20,36 +21,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
+No installation process required.
 
 ## Building and testing
 
-Explain how to run the debugging 'watch' script for this repo, if applicable
-
-Explain how to run unit tests, if applicable
+ - Run local server and open from project root (index.html)
+      (Atom Live Server plugin is quick and easy: https://atom.io/packages/atom-live-server)
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system. **Do not include any credentials, IP addresses, or other sensitive information**
+Deploys as static website to any webserver.
+
+Upload project files to S3 bucket.
 
 ## Built With
 
-* [Angular](https://angular.io/) - The main web framework used
-* [Clarity UI](https://vmware.github.io/clarity/) - Top-level UI framework if you have one
-* [NPM](https://www.npmjs.com/) - Dependency Management
-* [Others](https://www.npmjs.com/) - Any other high-level dependencies
+* [AngularJS](https://angularjs.org/) - The main web framework used
+* [Sass](https://www.sass-lang.com/) - Stylesheets
 
 ## Contributing
 
@@ -67,8 +55,7 @@ To push tags to remote origin: `git push origin --tags`
 
 ## Authors
 
-* **[Jordan Doe](PROFILE_PAGE_URL_HERE)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
-* **[Jessie Smith](PROFILE_PAGE_URL_HERE)** - *Developer* -  [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
+* **[Mitch Samuels]**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -80,12 +67,6 @@ This project is licensed under the Creative Commons CC0 1.0 Universal License - 
 In the spirit of open source, please cite any re-use of the source code stored in this repository. Below is the suggested citation:
 
 `This project contains code produced by the Web Informatics and Mapping (WIM) team at the United States Geological Survey (USGS). As a work of the United States Government, this project is in the public domain within the United States. https://wim.usgs.gov`
-
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration Note
 
 ## About WIM
 * This project authored by the [USGS WIM team](https://wim.usgs.gov)
