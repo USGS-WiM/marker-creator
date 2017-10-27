@@ -191,35 +191,35 @@ Icon Colors
 */
 .wmm-icon-red:before{
   background-color: $red;
-  border-color: $red;
+  border-bottom-color: $red !important;
 }
 .wmm-icon-green:before{
   background-color: $green;
-  border-color: $green;
+  border-bottom-color: $green !important;
 }
 .wmm-icon-blue:before{
   background-color: $blue;
-  border-color: $blue;
+  border-bottom-color: $blue !important;
 }
 .wmm-icon-orange:before{
   background-color: $orange;
-  border-color: $orange;
+  border-bottom-color: $orange !important;
 }
 .wmm-icon-yellow:before{
   background-color: $yellow;
-  border-color: $yellow;
+  border-bottom-color: $yellow !important;
 }
 .wmm-icon-purple:before{
   background-color: $purple;
-  border-color: $purple;
+  border-bottom-color: $purple !important;
 }
 .wmm-icon-black:before{
   background-color: $black;
-  border-color: $black;
+  border-bottom-color: $black !important;
 }
 .wmm-icon-white:before{
   background-color: $white;
-  border-color: $white;
+  border-bottom-color: $white !important;
 }
 
 
@@ -400,7 +400,7 @@ Marker size
     overflow: visible !important;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 26px solid white;
+    border-bottom: 26px solid inherit;
     left: -3px;
     top: -2px;
     &:after{
