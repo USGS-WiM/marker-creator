@@ -14,7 +14,6 @@ app.config(function($routeProvider) {
     .otherwise({
         redirectTo: "/"
     });
-
 });
 
 app.controller('creatorController', function($scope) {
@@ -44,7 +43,6 @@ app.controller('creatorController', function($scope) {
     }
     document.getElementsByClassName("selectMarkerShape")[position].classList.add("active");
   }
-
 
   // Select Marker Background
   // Select Marker Background
