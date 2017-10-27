@@ -12,8 +12,8 @@
   <div class="optionSelector">
     <button class="selectMarkerShape active" ng-click="changeMarkerShape('pin', 0)"></button>
     <button class="selectMarkerShape" ng-click="changeMarkerShape('circle', 1)"></button>
-    <button class="selectMarkerShape" ng-click="changeMarkerShape('triangle', 2)"></button>
-    <button class="selectMarkerShape" ng-click="changeMarkerShape('square', 3)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('square', 2)"></button>
+    <button class="selectMarkerShape" ng-click="changeMarkerShape('triangle', 3)"></button>
     <button class="selectMarkerShape" ng-click="changeMarkerShape('diamond', 4)"></button>
   </div>
 
@@ -54,12 +54,14 @@
 
   <!-- Icons -->
   <div class="sidebarHeader">Marker Icon</div>
-  <div class="optionSelector">
+  <div class="optionSelector" ng-hide="markerShape == 'wmm-triangle'">
     <button class="selectMarkerIcon" ng-click="changeMarkerIcon('noicon', 0)"></button>
     <button class="selectMarkerIcon active" ng-click="changeMarkerIcon('circle', 1)"></button>
     <button class="selectMarkerIcon" ng-click="changeMarkerIcon('square', 2)"></button>
     <button class="selectMarkerIcon" ng-click="changeMarkerIcon('triangle', 3)"></button>
+    <button class="selectMarkerIcon" ng-click="changeMarkerIcon('diamond', 4)"></button>
   </div>
+  <div class="sectionError" ng-show="markerShape == 'wmm-triangle'">Icons not available for triangles</div>
 
   <!-- Icons -->
   <div class="sidebarHeader">Icon Color</div>
@@ -87,6 +89,6 @@
   <!-- Output -->
   <div class="sidebarHeader">Marker Div Classes</div>
   <div class="optionsOutput">
-    <code>wim-map-marker {{markerClasses}}</code>
+    <code>{{markerClasses}}</code>
   </div>
 </div>

@@ -22,10 +22,10 @@ app.controller('creatorController', function($scope) {
   // Variable Setup
   // Variable Setup
   // Variable Setup
-  $scope.markerClasses = "wmm-red wmm-circle wmm-icon-white wmm-size-25";
+  $scope.markerClasses = " wmm-pin wmm-red wmm-icon-circle wmm-icon-white wmm-size-25";
   $scope.markerShape = "wmm-pin";
   $scope.markerBackgroundColor = "wmm-red";
-  $scope.markerIcon = "wmm-circle";
+  $scope.markerIcon = "wmm-icon-circle";
   $scope.markerSize = "wmm-size-25";
   $scope.markerIconColor = "wmm-icon-white";
 
@@ -65,7 +65,7 @@ app.controller('creatorController', function($scope) {
   // Select Marker Icon
   // Select Marker Icon
   $scope.changeMarkerIcon = function(icon, position){
-    $scope.markerIcon = "wmm-" + icon;
+    $scope.markerIcon = "wmm-icon-" + icon;
     $scope.updateMarkerClasses();
 
     // Active class for selected button
@@ -125,7 +125,7 @@ app.controller('creatorController', function($scope) {
         + ' ' +
         (typeof $scope.markerSize  !== "undefined" ? $scope.markerSize : '');
 
-      document.getElementsByClassName("leaflet-marker-icon")[0].className = "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive wim-map-marker " + $scope.markerClasses;
+      document.getElementsByClassName("leaflet-marker-icon")[0].className = "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive " + $scope.markerClasses;
   }
 
 });

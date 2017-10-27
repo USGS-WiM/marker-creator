@@ -53,6 +53,14 @@ button:hover{
   font-weight: bolder;
   text-align: left;
 }
+.sectionError{
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 5px 0 5px 0;
+  font-size: 12px;
+  font-weight: bolder;
+  text-align: left;
+}
 
 /*
   Basemap Selection Buttons
@@ -295,6 +303,17 @@ button:hover{
   background-color: transparent;
   margin-left: -7px;
   margin-top: -7px;
+}
+// Diamond
+.selectMarkerIcon:nth-child(5):before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-color: black;
+  margin-left: -7px;
+  margin-top: -7px;
+  transform: rotate(45deg);
 }
 
 
