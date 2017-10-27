@@ -25,7 +25,7 @@
 .wmm-pin{
   display: block;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   &:after{
     content: '';
     display: block;
@@ -47,7 +47,7 @@
 .wmm-circle{
   display: block;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   &:after{
     content: '';
     display: block;
@@ -65,7 +65,7 @@
 .wmm-square{
   display: block;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   &:after{
     content: '';
     display: block;
@@ -86,7 +86,7 @@
   border-top: none !important;
   background-color: transparent !important;
   background-color: transparent;
-  position: relative;
+  position: absolute;
   top: 1px;
   padding: 0;
   overflow: visible !important;
@@ -102,7 +102,7 @@
 .wmm-diamond{
   display: block;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   overflow: visible !important;
   &:after{
     content: '';
@@ -125,7 +125,7 @@
 .wmm-diamond{
   display: block;
   overflow: hidden;
-  position: absolute;
+  position: absolute !important;
 
   &:hover{
     transition: 0.1s;
