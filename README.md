@@ -1,4 +1,4 @@
-![WiM](wimlogo.png)
+![WiM](assets/branding/wimlogo.png)
 
 
 # Marker Creator
@@ -11,8 +11,8 @@ What things you need to install the software and how to install them
 
 ```
 Simple local web server
-Sass autocompile plugin 
-  Atom: https://atom.io/packages/sass-autocompile 
+Sass autocompile plugin
+  Atom: https://atom.io/packages/sass-autocompile
 ```
 
 ## Getting Started
