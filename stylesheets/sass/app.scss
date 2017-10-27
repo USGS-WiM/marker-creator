@@ -289,7 +289,7 @@ button:hover{
   border-radius: 50%;
   position: absolute;
   margin-left: -7px;
-  margin-top: -7px;
+  margin-top: -6px;
 }
 // Square
 .selectMarkerIcon:nth-child(3):before{
@@ -299,7 +299,7 @@ button:hover{
   position: absolute;
   background-color: black;
   margin-left: -7px;
-  margin-top: -7px;
+  margin-top: -6px;
 }
 // Triangle
 .selectMarkerIcon:nth-child(4):before{
@@ -312,7 +312,7 @@ button:hover{
   border-bottom: 14px solid black;
   background-color: transparent;
   margin-left: -7px;
-  margin-top: -7px;
+  margin-top: -6px;
 }
 // Diamond
 .selectMarkerIcon:nth-child(5):before{
@@ -322,7 +322,7 @@ button:hover{
   position: absolute;
   background-color: black;
   margin-left: -7px;
-  margin-top: -7px;
+  margin-top: -6px;
   transform: rotate(45deg);
 }
 
