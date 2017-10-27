@@ -125,7 +125,7 @@
 .wmm-diamond{
   display: block;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 
   &:hover{
     transition: 0.1s;

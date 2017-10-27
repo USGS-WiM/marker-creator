@@ -32,7 +32,7 @@ button:hover{
   background-color: rgba(255,255,255,0.9);
   box-sizing: border-box;
   padding: 10px 20px 20px 20px;
-  width: 400px;
+  width: 420px;
   margin-bottom: 70px;
   position: fixed;
   z-index: 5000;
@@ -415,7 +415,7 @@ code{
   top: 0;
   right: 0;
   width: 100vw;
-  width: calc(100vw - 400px);
+  width: calc(100vw - 420px);
   height: 100vh;
 }
 
