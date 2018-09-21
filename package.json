@@ -1,0 +1,15 @@
+{
+  "name": "marker-creator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/USGS-WiM/marker-creator",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:USGS-WiM/marker-creator.git"
+  },
+  "authors": [
+  ],
+  "description": "Generate CSS map markers",
+  "license": "MIT",
+  "devDependencies": {
+  }
+}
