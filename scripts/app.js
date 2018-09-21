@@ -28,6 +28,9 @@ app.controller('creatorController', function($scope) {
   $scope.markerSize = "wmm-size-25";
   $scope.markerIconColor = "wmm-icon-white";
 
+  $scope.hideBorder = false;
+
+
 
   // Select Marker Background
   // Select Marker Background
@@ -58,6 +61,7 @@ app.controller('creatorController', function($scope) {
     }
     document.getElementsByClassName("selectMarkerBackground")[position].classList.add("active");
   }
+
 
   // Select Marker Icon
   // Select Marker Icon
@@ -122,6 +126,11 @@ app.controller('creatorController', function($scope) {
         (typeof $scope.markerIconColor  !== "undefined" ? $scope.markerIconColor : '')
         + ' ' +
         (typeof $scope.markerSize  !== "undefined" ? $scope.markerSize : '');
+
+        // Hide borders
+        if($scope.hideBorder){
+          $scope.markerClasses = $scope.markerClasses + " " + "wmm-borderless";
+        }
 
       document.getElementsByClassName("leaflet-marker-icon")[0].className = "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive " + $scope.markerClasses;
   }

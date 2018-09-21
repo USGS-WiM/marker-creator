@@ -41,6 +41,13 @@
     transform: rotate(45deg);
     transform-origin: 50% 50%;
   }
+
+  &.wmm-borderless{
+
+    &:after{
+      border: none;
+    }
+  }
 }
 
 // Circle
@@ -59,6 +66,12 @@
     box-sizing: border-box;
     position: relative;
   }
+
+  &.wmm-borderless{
+    &:after{
+      border: none;
+    }
+  }
 }
 
 // Square
@@ -76,6 +89,12 @@
     border-radius: 0%;
     box-sizing: border-box;
     position: relative;
+  }
+
+  &.wmm-borderless{
+    &:after{
+      border: none;
+    }
   }
 }
 
@@ -96,6 +115,7 @@
   &:before{
     display: none !important;
   }
+
 }
 
 // Diamond
@@ -115,6 +135,12 @@
     box-sizing: border-box;
     position: relative;
     transform: rotate(45deg);
+  }
+
+  &.wmm-borderless{
+    &:after{
+      border: none;
+    }
   }
 }
 

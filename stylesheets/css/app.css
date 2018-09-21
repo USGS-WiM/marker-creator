@@ -1,0 +1,467 @@
+body {
+  background-color: #f1f1f1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 35px;
+  font-family: 'Arial', sans-serif;
+  text-align: center; }
+
+* {
+  outline: none; }
+
+button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s; }
+
+.optionsDisplay {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px 20px 20px;
+  width: 420px;
+  margin-bottom: 70px;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  border-right: 2px solid black;
+  height: 100vh;
+  overflow-x: scroll; }
+
+.sidebarLogo {
+  display: block;
+  width: 200px;
+  position: relative;
+  left: -4px;
+  margin-bottom: 15px; }
+
+.sidebarHeader {
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 0 5px 0;
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: left; }
+
+.sectionMessage {
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0 5px 0;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  font-weight: bolder;
+  text-align: left;
+  line-height: 20px; }
+  .sectionMessage.small {
+    margin-bottom: 0px; }
+
+/*
+  Basemap Selection Buttons
+*/
+.basemapSelector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.basemapSelector button {
+  width: 31.33%;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 2px solid #1C1C1C; }
+
+.basemapSelector button:hover {
+  background-color: #f1f1f1; }
+
+.basemapSelector button.active {
+  background-color: #1C1C1C;
+  color: white; }
+
+/*
+  Customization buttons
+*/
+.optionSelector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .optionSelector button {
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+    .optionSelector button .active {
+      border-radius: 50%;
+      -webkit-transition: 0.22s;
+      -o-transition: 0.22s;
+      transition: 0.22s; }
+  .optionSelector .optionSelectorHeader {
+    display: block;
+    width: 100%;
+    letter-spacing: -0.4px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 600;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0 5px 0; }
+    .optionSelector .optionSelectorHeader:before {
+      content: '\2014 ';
+      position: relative;
+      top: -1px;
+      margin-right: 1px;
+      display: inline-block; }
+
+.toggleitem {
+  text-align: left;
+  margin-bottom: 12px; }
+  .toggleitem label span {
+    font-size: 12px;
+    font-weight: 600; }
+
+.selectMarkerShape.active {
+  background-color: #06070E !important; }
+  .selectMarkerShape.active:after {
+    background-color: #06070E !important;
+    border-bottom-color: #06070E !important; }
+
+.selectMarkerShape:nth-child(1) {
+  content: '';
+  display: block;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  border: 2px solid black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 0;
+  height: 24px;
+  width: 24px;
+  -webkit-transform: scale(45deg);
+  -ms-transform: scale(45deg);
+  transform: scale(45deg);
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+  .selectMarkerShape:nth-child(1):hover {
+    -webkit-transform: rotate(45deg) scale(1.05);
+    -ms-transform: rotate(45deg) scale(1.05);
+    transform: rotate(45deg) scale(1.05); }
+
+.selectMarkerShape:nth-child(2) {
+  border-radius: 50%;
+  background-color: white;
+  border-width: 2px; }
+
+.selectMarkerShape:nth-child(3) {
+  background-color: white;
+  border-width: 2px; }
+
+.selectMarkerShape:nth-child(4) {
+  height: 0px;
+  width: 0px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 28px solid black;
+  border-top: none !important;
+  background-color: transparent !important;
+  background-color: transparent;
+  position: relative;
+  top: 1px;
+  padding: 0; }
+  .selectMarkerShape:nth-child(4):after {
+    height: 0px;
+    width: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 22px solid white;
+    border-top: none !important;
+    background-color: transparent !important;
+    background-color: transparent;
+    position: absolute;
+    margin-left: -12px;
+    margin-top: 3px;
+    top: 1px;
+    content: '';
+    padding: 0; }
+
+.selectMarkerShape:nth-child(5) {
+  background-color: white;
+  border-width: 2px;
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 2px; }
+  .selectMarkerShape:nth-child(5):hover {
+    -webkit-transform: rotate(45deg) scale(1.05);
+    -ms-transform: rotate(45deg) scale(1.05);
+    transform: rotate(45deg) scale(1.05); }
+
+.selectMarkerBackground.active {
+  border-radius: 50%; }
+
+.selectMarkerBackground:nth-child(1) {
+  background-color: #FC3C4F; }
+
+.selectMarkerBackground:nth-child(2) {
+  background-color: #25B9AA; }
+
+.selectMarkerBackground:nth-child(3) {
+  background-color: #3092F4; }
+
+.selectMarkerBackground:nth-child(4) {
+  background-color: #FB833C; }
+
+.selectMarkerBackground:nth-child(5) {
+  background-color: #FCDC76; }
+
+.selectMarkerBackground:nth-child(6) {
+  background-color: #A06FF9; }
+
+.selectMarkerBackground:nth-child(7) {
+  background-color: #06070E; }
+
+.selectMarkerBackground:nth-child(8) {
+  background-color: #ffffff; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(1) {
+  background-color: #ff4d4d; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(2) {
+  background-color: #b8141f; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(3) {
+  background-color: #FB833C; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(4) {
+  background-color: #37FD9F; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(5) {
+  background-color: #85e4fa; }
+
+.colorPaletteAlt .selectMarkerBackground:nth-child(6) {
+  background-color: #2346f6; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(1) {
+  background-color: #f15b74; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(2) {
+  background-color: #75AE8A; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(3) {
+  background-color: #8CACAF; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(4) {
+  background-color: #FD896D; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(5) {
+  background-color: #F7C781; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(6) {
+  background-color: #90748B; }
+
+.colorPaletteMuted .selectMarkerBackground:nth-child(7) {
+  background-color: #ffb3ff; }
+
+.selectMarkerIcon.active {
+  border-radius: 50%; }
+
+.selectMarkerIcon {
+  background-color: white; }
+
+.selectMarkerIcon:nth-child(1):before {
+  content: '';
+  display: block;
+  width: 27px;
+  height: 2px;
+  margin-top: 1px;
+  background-color: black;
+  margin-left: -6px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.selectMarkerIcon:nth-child(2):before {
+  content: '';
+  height: 14px;
+  width: 14px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -7px;
+  margin-top: -6px; }
+
+.selectMarkerIcon:nth-child(3):before {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-color: black;
+  margin-left: -7px;
+  margin-top: -6px; }
+
+.selectMarkerIcon:nth-child(4):before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid black;
+  background-color: transparent;
+  margin-left: -7px;
+  margin-top: -6px; }
+
+.selectMarkerIcon:nth-child(5):before {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-color: black;
+  margin-left: -7px;
+  margin-top: -6px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.selectMarkerIconColor.active {
+  border-radius: 50%; }
+
+.selectMarkerIconColor:nth-child(1) {
+  background-color: #FC3C4F; }
+
+.selectMarkerIconColor:nth-child(2) {
+  background-color: #25B9AA; }
+
+.selectMarkerIconColor:nth-child(3) {
+  background-color: #3092F4; }
+
+.selectMarkerIconColor:nth-child(4) {
+  background-color: #FB833C; }
+
+.selectMarkerIconColor:nth-child(5) {
+  background-color: #FCDC76; }
+
+.selectMarkerIconColor:nth-child(6) {
+  background-color: #A06FF9; }
+
+.selectMarkerIconColor:nth-child(7) {
+  background-color: #06070E; }
+
+.selectMarkerIconColor:nth-child(8) {
+  background-color: #ffffff; }
+
+.selectMarkerSize.active {
+  border-radius: 50%; }
+
+.selectMarkerSize {
+  background-color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 0; }
+
+.selectMarkerSize:nth-child(1) {
+  height: 16px;
+  width: 15px;
+  max-width: 15px;
+  font-size: 7px; }
+
+.selectMarkerSize:nth-child(2) {
+  height: 20px;
+  width: 20px;
+  font-size: 8px; }
+
+.selectMarkerSize:nth-child(3) {
+  height: 25px;
+  width: 25px;
+  font-size: 9px; }
+
+.selectMarkerSize:nth-child(4) {
+  height: 30px;
+  width: 30px;
+  font-size: 10px; }
+
+.selectMarkerSize:nth-child(5) {
+  height: 35px;
+  width: 35px;
+  font-size: 11px; }
+
+.optionsOutput {
+  display: block;
+  text-align: left;
+  line-height: 26px;
+  background-color: black;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px; }
+
+code {
+  text-align: left;
+  background-color: black;
+  color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 5px 0 0 0;
+  border-radius: 3px; }
+  code a {
+    text-decoration: underline;
+    color: white; }
+    code a:hover {
+      cursor: pointer;
+      color: white; }
+
+/*Leaflet*/
+#mapid {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  width: calc(100vw - 420px);
+  height: 100vh; }
+
+.leaflet-top {
+  display: none; }

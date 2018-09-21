@@ -55,6 +55,17 @@
     </div>
   </div>
 
+  <!-- Borders -->
+  <div class="sidebarHeader">Border</div>
+  <div class="sectionMessage" ng-show="markerShape == 'wmm-triangle'">Triangles must have borders.</div>
+  <div class="toggleitem" ng-hide="markerShape == 'wmm-triangle'">
+    <label for="showBorders">
+      <input type="checkbox" id="showBorders" ng-model="hideBorder" ng-change="updateMarkerClasses()"/>
+      <span>Hide Marker Borders</span>
+    </label>
+  </div>
+
+
   <!-- Icons -->
   <div class="sidebarHeader">Marker Icon</div>
   <div class="optionSelector" ng-hide="markerShape == 'wmm-triangle'">
@@ -100,7 +111,7 @@
 
   <div class="sidebarHeader">CSS File</div>
   <div class="optionsOutput">
-    <code>https://rawgit.com/USGS-WiM/marker-creator/master/stylesheets/markers.css</code>
+    <code><a href="https://rawgit.com/USGS-WiM/marker-creator/master/stylesheets/css/markers.css" target="_blank">https://rawgit.com/USGS-WiM/marker-creator/master/stylesheets/css/markers.css</a></code>
   </div>
   <br/>
   <div class="sectionMessage">Import the above CSS file in your project for testing and use the <u>Marker Div Classes</u> with Leaflet .divIcon to add them to your maps.</div>

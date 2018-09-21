@@ -70,6 +70,10 @@ button:hover{
   font-weight: bolder;
   text-align: left;
   line-height: 20px;
+
+  &.small{
+    margin-bottom: 0px;
+  }
 }
 
 /*
@@ -133,6 +137,26 @@ button:hover{
       top: -1px;
       margin-right: 1px;
       display: inline-block;
+    }
+  }
+}
+
+// Toggle Item
+// Toggle Item
+// Toggle Item
+.toggleitem{
+  text-align: left;
+  margin-bottom: 12px;
+
+  label{
+
+    input{
+
+    }
+
+    span{
+      font-size: 12px;
+      font-weight: 600;
     }
   }
 }
@@ -406,6 +430,16 @@ code{
   box-sizing: border-box;
   margin: 5px 0 0 0;
   border-radius: 3px;
+
+  a{
+    text-decoration: underline;
+    color: white;
+
+    &:hover{
+      cursor: pointer;
+      color: white;
+    }
+  }
 }
 
 /*Leaflet*/
