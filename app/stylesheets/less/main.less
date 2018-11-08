@@ -1,0 +1,88 @@
+// out: ../main.css, compress: true
+
+// Reset
+@import 'universal/reset.less';
+
+// Variables
+@import 'variables.less';
+
+// Universal styles
+@import 'universal/structure.less';
+@import 'universal/markers.less';
+@import 'universal/app.less';
+
+// Page styles
+@import 'pages/home.less';
+
+*{
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-overflow-scrolling: touch;
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizeLegibility;
+
+
+    &:hover{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
+    &:active{
+        outline: none;
+    }
+
+    @media (max-width: 550px) {
+        &:not([contenteditable="true"]),
+        &:not(input){
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: fade(@black, 15%);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+
+body,
+html{
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-family: @poppins;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: @black;
+    padding: 0;
+    margin: 0;
+}
+body{
+    max-height: none;
+}
+
+::selection {
+  background: @blue;
+  color: white;
+}
+::-moz-selection {
+  background: @blue;
+  color: white;
+}

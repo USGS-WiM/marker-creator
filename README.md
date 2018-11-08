@@ -1,7 +1,7 @@
 ![WiM](assets/branding/wimlogo.png)
 
 
-# Marker Creator
+# Marker Maker
 
 Generate CSS Map Markers for use with Leaflet maps
 
@@ -10,9 +10,8 @@ Generate CSS Map Markers for use with Leaflet maps
 What things you need to install the software and how to install them
 
 ```
-Simple local web server
-Sass autocompile plugin
-  Atom: https://atom.io/packages/sass-autocompile
+NPM
+Gulp
 ```
 
 ## Getting Started
@@ -21,23 +20,33 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-No installation process required.
+```
+git clone https://github.com/USGS-WiM/marker-creator.git
+cd /marker-creator/
+npm install
+```
 
 ## Building and testing
 
- - Run local server and open from project root (index.html)
-      (Atom Live Server plugin is quick and easy: https://atom.io/packages/atom-live-server)
+```
+gulp
+```
+Serves development project in /app with browsersync for LESS injections and live reloading
+```
+gulp build
+```
+Builds project to /public
 
 ## Deployment
 
 Deploys as static website to any webserver.
 
-Upload project files to S3 bucket.
+Upload /public folder to S3 bucket.
 
 ## Built With
 
 * [AngularJS](https://angularjs.org/) - The main web framework used
-* [Sass](https://www.sass-lang.com/) - Stylesheets
+* [LESS](https://www.lesscss.org/) - Stylesheets
 
 ## Contributing
 

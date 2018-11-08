@@ -1,0 +1,74 @@
+// main: ../main.less
+
+.home-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: @blue;
+
+    .home-dev-info{
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: auto;
+        box-sizing: border-box;
+        padding: 30px 35px 30px 35px;
+        margin: 0 auto;
+        box-shadow: 0 10px 35px -2px rgba(30, 16, 84, .3);
+        background-color: @white;
+        border-radius: @border-radius;
+
+        i{
+            font-size: 65px;
+            color: @blue;
+            display: block;
+            margin: 0 auto 25px auto;
+        }
+
+        h1{
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: @black;
+        }
+
+        ul{
+            display: block;
+            margin: 15px 0 15px 0;
+
+            li{
+                display: block;
+                padding: 2px 0;
+                font-size: 12px;
+                font-weight: 600;
+                text-align: center;
+                color: @text;
+            }
+        }
+
+
+        label{
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0.2px;
+            font-weight: 500;
+            color: @text-light;
+            margin-bottom: 3px;
+        }
+
+        code{
+            display: block;
+            background-color: @black;
+            font-size: 13px;
+            box-sizing: border-box;
+            padding: 6px 10px;
+            border-radius: @border-radius;
+            margin-bottom: 8px;
+            color: @white;
+            font-family: monospace;
+        }
+    }
+}

@@ -1,0 +1,543 @@
+
+#bodyWrapper{
+    
+    @media (max-width: 900px) {
+        display: block;
+        width: 100vw;
+        height: 75vh;
+        top: auto;
+        bottom: 0;
+        margin-bottom: 0;
+        border-right: none;
+        position: relative;
+        overflow: auto;
+        box-sizing: border-box;
+        border-top: 2px solid black;
+
+    }
+}
+
+*{
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+// Main sidebar
+.optionsDisplay{
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+    width: 420px;
+    margin-bottom: 70px;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    border-right: 2px solid black;
+    height: 100vh;
+    overflow-x: scroll;
+
+    @media (max-width: 900px) {
+      top: auto;
+      height: auto;
+      width: 94%;
+      max-width: 420px;
+      bottom: 0;
+      margin-bottom: 0;
+      border-right: none;
+      position: relative;
+    }
+}
+
+.sidebarLogo{
+    display: block;
+    width: 200px;
+    position: relative;
+    left: -4px;
+    margin-bottom: 15px;
+}
+
+// Sidebar Header
+.sidebarHeader{
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    padding: 25px 0 8px 0;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: -0.2px;
+    text-align: left;
+
+    em{
+        opacity: 0.5;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: -0.4px;    
+    }
+}
+small{
+    box-sizing: border-box;
+    padding: 5px 0 5px 0;
+    font-size: 12px;
+    letter-spacing: -0.25px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left !important;
+    color: fade(@text, 45%);
+    letter-spacing: 0.1px;
+
+    &.small{
+        margin-bottom: 0px;
+    }
+}
+
+/*
+Basemap Selection Buttons
+*/
+.basemapSelector{
+    display: flex;
+    justify-content: space-between;
+}
+.basemapSelector button{
+    width: 31.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 2px solid @black;
+    border-radius: @border-radius;
+}
+.basemapSelector button:hover{
+    ground-color: #f1f1f1;
+}
+.basemapSelector button.active{
+    background-color: @black;
+    color: white;
+}
+
+/*
+Customization buttons
+*/
+.optionSelector{
+    display: flex;
+    flex-wrap: wrap;
+
+    .select-marker-shape,
+    .select-marker-background,
+    .select-marker-icon,
+    .select-marker-icon-color,
+    .select-marker-size{
+        border: 2px solid black;
+        height: 30px;
+        width: 30px;
+        transition: 0.2s;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        .active{
+        border-radius: 50%;
+        transition: 0.22s;
+        }
+    }
+    .option-selector-header{
+        display: block;
+        width: 100%;
+        letter-spacing: -0.4px;
+        font-size: 12px;
+        text-align: left;
+        font-weight: 600;
+        box-sizing: border-box;
+        padding: 0 0 5px 0;
+        &:before{
+            content: '\2014 ';
+            position: relative;
+            top: -1px;
+            margin-right: 1px;
+            display: inline-block;
+        }
+    }
+}
+
+// Toggle Item
+// Toggle Item
+// Toggle Item
+.toggleitem{
+    text-align: left;
+    margin-bottom: 12px;
+
+    label{
+
+        input{
+
+        }
+
+        span{
+        font-size: 12px;
+        font-weight: 600;
+        }
+    }
+}
+
+// Marker shape
+// Marker shape
+// Marker shape
+.select-marker-shape.active{
+    background-color: @black !important;
+    &:after,{
+        background-color: @black !important;
+        border-bottom-color: @black !important;
+    }
+}
+// Pin
+.select-marker-shape:nth-child(1){
+    content: '';
+    display: block;
+    transition: 0.1s;
+    border: 2px solid rgba(0,0,0,1);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 0;
+    height: 24px;
+    width: 24px;
+    transform: scale(45deg);
+    background-color: white;
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    &:hover{
+        transform: rotate(45deg) scale(1.05);
+    }
+}
+// Circle
+.select-marker-shape:nth-child(2){
+    border-radius: 50%;
+    background-color: white;
+    border-width: 2px;
+}
+// Square
+.select-marker-shape:nth-child(3){
+    background-color: white;
+    border-width: 2px;
+}
+// Triangle
+.select-marker-shape:nth-child(4){
+    height: 0px;
+    width: 0px;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 28px solid black;
+    border-top: none !important;
+    background-color: transparent !important;
+    background-color: transparent;
+    position: relative;
+    top: 1px;
+    padding: 0;
+    &:after{
+        height: 0px;
+        width: 0px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 22px solid white;
+        border-top: none !important;
+        background-color: transparent !important;
+        background-color: transparent;
+        position: absolute;
+        margin-left: -12px;
+        margin-top: 3px;
+        top: 1px;
+        content: '';
+        padding: 0;
+    }
+}
+// Diamond
+.select-marker-shape:nth-child(5){
+    background-color: white;
+    border-width: 2px;
+    transform: rotate(45deg) scale(1);
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 2px;
+    &:hover{
+        transform: rotate(45deg) scale(1.05);
+    }
+}
+
+
+
+// Marker background color
+// Marker background color
+// Marker background color
+.select-marker-background.active{
+    border-radius: 50%;
+}
+// Basic colors
+.select-marker-background:nth-child(1){background-color: @red;}
+.select-marker-background:nth-child(2){background-color: @green;}
+.select-marker-background:nth-child(3){background-color: @blue;}
+.select-marker-background:nth-child(4){background-color: @orange;}
+.select-marker-background:nth-child(5){background-color: @yellow;}
+.select-marker-background:nth-child(6){background-color: @purple;}
+.select-marker-background:nth-child(7){background-color: @black;}
+.select-marker-background:nth-child(8){background-color: @white;}
+// Alternative colors
+.colorPaletteAlt .select-marker-background:nth-child(1){background-color: @altRed;}
+.colorPaletteAlt .select-marker-background:nth-child(2){background-color: @altDarkRed;}
+.colorPaletteAlt .select-marker-background:nth-child(3){background-color: @altOrange;}
+.colorPaletteAlt .select-marker-background:nth-child(4){background-color: @altLime;}
+.colorPaletteAlt .select-marker-background:nth-child(5){background-color: @altSky;}
+.colorPaletteAlt .select-marker-background:nth-child(6){background-color: @altBlue;}
+// Muted colors
+.colorPaletteMuted .select-marker-background:nth-child(1){background-color: @mutedRed;}
+.colorPaletteMuted .select-marker-background:nth-child(2){background-color: @mutedGreen;}
+.colorPaletteMuted .select-marker-background:nth-child(3){background-color: @mutedBlue;}
+.colorPaletteMuted .select-marker-background:nth-child(4){background-color: @mutedOrange;}
+.colorPaletteMuted .select-marker-background:nth-child(5){background-color: @mutedYellow;}
+.colorPaletteMuted .select-marker-background:nth-child(6){background-color: @mutedPurple;}
+.colorPaletteMuted .select-marker-background:nth-child(7){background-color: @mutedPink;}
+
+
+
+
+// Marker icons
+// Marker icons
+// Marker icons
+.select-marker-icon.active{
+    border-radius: 50%;
+}
+.select-marker-icon{
+    background-color: white;
+}
+// None
+.select-marker-icon:nth-child(1):before{
+    content: '';
+    display: block;
+    width: 27px;
+    height: 2px;
+    margin-top: 1px;
+    background-color: black;
+    margin-left: -6px;
+    transform: rotate(-45deg);
+}
+// Circle
+.select-marker-icon:nth-child(2):before{
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -7px;
+    margin-top: -6px;
+}
+// Square
+.select-marker-icon:nth-child(3):before{
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    background-color: black;
+    margin-left: -7px;
+    margin-top: -6px;
+}
+// Triangle
+.select-marker-icon:nth-child(4):before{
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid black;
+    background-color: transparent;
+    margin-left: -7px;
+    margin-top: -6px;
+}
+// Diamond
+.select-marker-icon:nth-child(5):before{
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    background-color: black;
+    margin-left: -7px;
+    margin-top: -6px;
+    transform: rotate(45deg);
+}
+
+
+// Marker icon color
+// Marker icon color
+// Marker icon color
+.select-marker-icon-color.active{
+    border-radius: 50%;
+}
+.select-marker-icon-color:nth-child(1){background-color: @red;}
+.select-marker-icon-color:nth-child(2){background-color: @green;}
+.select-marker-icon-color:nth-child(3){background-color: @blue;}
+.select-marker-icon-color:nth-child(4){background-color: @orange;}
+.select-marker-icon-color:nth-child(5){background-color: @yellow;}
+.select-marker-icon-color:nth-child(6){background-color: @purple;}
+.select-marker-icon-color:nth-child(7){background-color: @black;}
+.select-marker-icon-color:nth-child(8){background-color: @white;}
+
+
+// Marker size
+// Marker size
+// Marker size
+.select-marker-size.active{
+    border-radius: 50%;
+}
+.select-marker-size{
+    background-color: white;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0;
+}
+.select-marker-size:nth-child(1){
+    height: 16px;
+    width: 15px;
+    max-width: 15px;
+    font-size: 7px;
+}
+.select-marker-size:nth-child(2){
+    height: 20px;
+    width: 20px;
+    font-size: 8px;
+}
+.select-marker-size:nth-child(3){
+    height: 25px;
+    width: 25px;
+    font-size: 9px;
+}
+.select-marker-size:nth-child(4){
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+}
+.select-marker-size:nth-child(5){
+    height: 35px;
+    width: 35px;
+    font-size: 11px;
+}
+
+
+
+
+// Misc
+// Misc
+// Misc
+// Misc
+// Misc
+// Misc
+.options-output{
+    display: block;
+    text-align: left;
+    line-height: 18px;
+    background-color: fade(@text, 95%);
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+    border-radius: @border-radius;
+    margin-bottom: 10px;
+}
+code{
+    text-align: left;
+    color: white;
+    box-sizing: border-box;
+    margin: 5px 0 0 0;
+    font-family: monospace;
+    border-radius: 3px;
+
+    a{
+        text-decoration: underline;
+        color: white;
+
+        &:hover{
+        cursor: pointer;
+        color: white;
+        }
+    }
+}
+
+/*Leaflet*/
+#mapid {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    width: calc(~'100vw - 420px');
+
+    @media (max-width: 900px) {
+      position: relative;
+      width: 100%;
+      height: 25vh;
+    }
+}
+
+.leaflet-top{
+    display: none;
+}
+
+
+.custom-color-picker{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+
+    b{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: @border-color;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    input{
+        border: none;
+        width: 100%;
+        color: @text;
+        font-size: 22px;
+        box-sizing: border-box;
+        padding: 2px 6px;
+        font-weight: 600;
+        font-family: @poppins;
+        border-bottom: 2px solid @border-color;
+    }
+}
+
+#borderToggleButton{
+    font-family: @poppins;
+    color: @text;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: @border-radius;
+    padding: 4px 0;
+    margin: 0 0 8px 5px;
+    border: none;
+
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        transform: scale(1);
+    }
+}
+
+.flexgrow{
+    flex-grow: 5;
+}
