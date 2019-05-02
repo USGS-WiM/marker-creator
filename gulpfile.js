@@ -6,7 +6,6 @@ var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
 var cacheBuster = require('gulp-cache-bust');
-var purgecss = require('gulp-purgecss');
 var replace = require('gulp-replace');
 var less = require('gulp-less');
 var browserSync = require("browser-sync").create();
@@ -51,14 +50,6 @@ gulp.task('cacheBuster', function () {
         .pipe(gulp.dest('public'));
 });
 
-// Purge unused CSS
-gulp.task('purgeCSS', function () {
-    return gulp.src('public/css/main.css')
-        .pipe(purgecss({
-            content: ["public/**/*.html"]
-        }))
-        .pipe(gulp.dest('public/css'))
-});
 
 // Find and replace dev mode
 gulp.task('disableDevMode', function(){
@@ -73,9 +64,9 @@ gulp.task('disableDevMode', function(){
 // Clean first, then the rest
 gulp.task('build', function (callback) {
     runSequence(
-        // 'clean:dist',
+        'clean:dist',
         ['useref', 'static', 'compile-less'],
-        // ['useref', 'static', 'purgeCSS'],
+        // ['useref', 'static'],
         ['cacheBuster', 'disableDevMode'],
         callback
     )
