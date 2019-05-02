@@ -1,4 +1,4 @@
-![WiM](app/assets/branding/meta/wimlogo.png)
+![WiM](app/assets/branding/wimlogo.png)
 
 
 # Marker Maker
