@@ -2,8 +2,8 @@
   {
     "name": "marker-creator",
     "organization": "U.S. Geological Survey",
-    "description": "Generate CSS map markers",
-    "version": "v1.0.0",
+    "description": "Generate CSS-only map markers for leaflet maps",
+    "version": "v1.0.1",
     "status": "Production",
 
     "permissions": {
@@ -25,16 +25,12 @@
     "laborHours": null,
 
     "tags": [
-      "maps",
-      "markers",
-      "generator"
+      "Webapp",
+      "Map"
     ],
 
     "languages": [
-      "CSS",
-      "SCSS",
-      "HTML",
-      "Javascript"
+      "AngularJS"
     ],
 
     "contact": {
@@ -43,7 +39,7 @@
     },
 
     "date": {
-      "metadataLastUpdated": "2017-10-26"
+      "metadataLastUpdated": "2019-05-02"
     }
   }
 ]

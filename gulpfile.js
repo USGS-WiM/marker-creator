@@ -26,7 +26,7 @@ gulp.task('useref', function(){
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
 
-        .pipe(gulp.dest('public/markermaker/'))
+        .pipe(gulp.dest('public/'))
 });
 
 // Clean build folder
@@ -41,7 +41,7 @@ var filesToMove = [
     ];
 gulp.task('static', function(){
     gulp.src(filesToMove, { base: './app/' })
-        .pipe(gulp.dest('public/markermaker/'));
+        .pipe(gulp.dest('public/'));
 });
 
 // Cache Buster
@@ -57,15 +57,15 @@ gulp.task('purgeCSS', function () {
         .pipe(purgecss({
             content: ["public/**/*.html"]
         }))
-        .pipe(gulp.dest('public/markermaker/css'))
+        .pipe(gulp.dest('public/css'))
 });
 
 // Find and replace dev mode
 gulp.task('disableDevMode', function(){
-    gulp.src(['public/markermaker/app.js'])
+    gulp.src(['public/app.js'])
         .pipe(replace('html5Mode({enabled:!1,requireBase:!1})', 'html5Mode({enabled:!0,requireBase:!0})'))
         .pipe(replace('$scope.devMode=!0', '$scope.devMode=!1'))
-        .pipe(gulp.dest('public/markermaker/'));
+        .pipe(gulp.dest('public/'));
 });
 
 
@@ -74,7 +74,7 @@ gulp.task('disableDevMode', function(){
 gulp.task('build', function (callback) {
     runSequence(
         // 'clean:dist',
-        ['useref', 'static'],
+        ['useref', 'static', 'compile-less'],
         // ['useref', 'static', 'purgeCSS'],
         ['cacheBuster', 'disableDevMode'],
         callback
@@ -90,7 +90,7 @@ gulp.task('build', function (callback) {
 // Live reload for HTML and JS
 
 gulp.task('compile-less', function () {
-    gulp.src('./app/stylesheets/less/main.less')
+    gulp.src(['./app/stylesheets/less/main.less', './app/stylesheets/less/universal/markers.less'])
         .pipe(less())
         .pipe(gulp.dest('./app/stylesheets/css/'))
         .pipe(browserSync.stream());

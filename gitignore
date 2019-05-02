@@ -21,12 +21,13 @@
 *.zip
 
 # Node #
-########
+######################
 node_modules/
 
-# Build Folder #
-########
-public
+# Build #
+######################
+public/
+dev/
 
 # Logs and databases #
 ######################
