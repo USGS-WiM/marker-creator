@@ -126,25 +126,25 @@ table {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v6/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLGT9Z1xlEA.ttf) format('truetype');
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLGT9Z1xlEA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLEj6Z1xlEA.ttf) format('truetype');
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLEj6Z1xlEA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf) format('truetype');
+  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf) format('truetype');
 }
 [ng\:cloak],
 [ng-cloak],
@@ -167,6 +167,7 @@ table {
   display: block;
   overflow: hidden;
   position: absolute;
+  overflow: visible;
 }
 .wmm-pin:after {
   content: '';
@@ -182,13 +183,14 @@ table {
   position: relative;
   transform: rotate(45deg);
   transform-origin: 50% 50%;
+  box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.35);
 }
 .wmm-pin.wmm-borderless:after {
   border: none;
 }
 .wmm-circle {
   display: block;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
 }
 .wmm-circle:after {
@@ -201,6 +203,7 @@ table {
   border-radius: 50%;
   box-sizing: border-box;
   position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
 }
 .wmm-circle.wmm-borderless:after {
   border: none;
@@ -209,6 +212,7 @@ table {
   display: block;
   overflow: hidden;
   position: absolute;
+  overflow: visible;
 }
 .wmm-square:after {
   content: '';
@@ -220,6 +224,7 @@ table {
   border-radius: 0%;
   box-sizing: border-box;
   position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
 }
 .wmm-square.wmm-borderless:after {
   border: none;
@@ -257,6 +262,7 @@ table {
   box-sizing: border-box;
   position: relative;
   transform: rotate(45deg);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
 }
 .wmm-diamond.wmm-borderless:after {
   border: none;
