@@ -32,9 +32,9 @@ jobs:
       with:
         args: ":warning::test: Error deploying *marker-creator* to test.wim.usgs.gov/markermaker - GitHub Action Failed"
 
-    - name: GitHub Action for Slack
-      uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      with:
-        args: ":test: Successfully deployed *marker-creator* to test.wim.usgs.gov/markermaker :fire:"
+    # - name: GitHub Action for Slack
+    #   uses: Ilshidur/action-slack@2a8ddb6db23f71a413f9958ae75bbc32bbaa6385
+    #   env:
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #   with:
+    #     args: ":test: Successfully deployed *marker-creator* to test.wim.usgs.gov/markermaker :fire:"
