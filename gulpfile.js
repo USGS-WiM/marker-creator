@@ -67,7 +67,8 @@ gulp.task('build', function (callback) {
         'clean:dist',
         ['useref', 'static', 'compile-less'],
         // ['useref', 'static'],
-        ['cacheBuster', 'disableDevMode'],
+        ['cacheBuster'],
+        // ['cacheBuster', 'disableDevMode'],
         callback
     )
 })
