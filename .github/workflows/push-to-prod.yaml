@@ -2,7 +2,7 @@ on:
   push:
     branches:
     - master
-name: "Push to wim.usgs.gov/markermaker (PROD)"
+name: "Production"
 jobs:
   pushToTest:
     name: Push to PROD
