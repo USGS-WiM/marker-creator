@@ -36,7 +36,6 @@ gulp.task('clean:dist', function() {
 // Move static files
 var filesToMove = [
         './app/assets/**/**/*',
-        './app/pages/**/*'
     ];
 gulp.task('static', function(){
     gulp.src(filesToMove, { base: './app/' })
