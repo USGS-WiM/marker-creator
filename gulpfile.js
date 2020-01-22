@@ -94,7 +94,7 @@ gulp.task('build-prod', function (callback) {
         'clean:dist',
         ['useref', 'static', 'compile-less'],
         // ['useref', 'static'],
-		['cacheBuster', 'disableDevMode'],
+		['cacheBuster'],
 		'base-href',
         callback
     )
