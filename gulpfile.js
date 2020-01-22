@@ -60,6 +60,7 @@ gulp.task('disableDevMode', function(){
 });
 
 
+
 // Build sequence
 // Clean first, then the rest
 gulp.task('build', function (callback) {
@@ -67,12 +68,37 @@ gulp.task('build', function (callback) {
         'clean:dist',
         ['useref', 'static', 'compile-less'],
         // ['useref', 'static'],
-        ['cacheBuster', 'disableDevMode'],
+		['cacheBuster', 'disableDevMode'],
         callback
     )
 })
 
 
+// Because markermaker is deployed at wim.usgs.gov/markermaker,
+// you must change the base href so it knows where to look for files
+// This does it autoomatically on build-prod - which is called by the Github action
+gulp.task('base-href', function() {
+	return gulp.src('public/index.html')
+	.pipe(replace('<base href="/">', function(match) {
+		console.log('Replace called on', match);
+		return'<base href="/markermaker/">'
+	}))
+	.pipe(gulp.dest('public/'));
+});
+
+
+// Same build sequence, but with the base href replacement
+// for /markermaker url
+gulp.task('build-prod', function (callback) {
+    runSequence(
+        'clean:dist',
+        ['useref', 'static', 'compile-less'],
+        // ['useref', 'static'],
+		['cacheBuster', 'disableDevMode'],
+		'base-href',
+        callback
+    )
+})
 
 // Browsersync
 // Watch for less changes
